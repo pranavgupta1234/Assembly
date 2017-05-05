@@ -7,9 +7,10 @@
 .DATA
 prompt_msg1  db   "Please input the first string : ",0
 prompt_msg2  db   "Please input the second  string : ",0
-output_msg  db   "The sum is :",0
+
 output_msg2  db   "Palindrome",0
 output_msg3  db   "Not A Palindrome",0
+
 .UDATA 
 var1   resd   80
 var2   resd   80
@@ -17,8 +18,8 @@ var3   resd   1
 
 .CODE
       .STARTUP
-      PutStr  prompt_msg1   ; request first number 
-      GetStr var1             ;  
+      PutStr  prompt_msg1   ; request first string 
+      GetStr var1           ; get first string
       
       mov EAX,0
       len:
@@ -41,7 +42,6 @@ var3   resd   1
             JNE no_pal
             JE is_pal
             
-
       no_pal:
             mov ECX,1 
             JMP print

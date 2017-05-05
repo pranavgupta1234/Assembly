@@ -1,0 +1,2 @@
+size of file using assembly 		5.4kb
+size of file using c			13.1kb

@@ -1,4 +1,4 @@
-%include "lib/io.mac"   ; Standard library file for I/O
+%include "io.mac"   ; Standard library file for I/O
 .DATA               ; Initialised Data Macro
     msg1    db  "Enter a string : ", 0
     msg2    db  "Encoded string : ", 0
