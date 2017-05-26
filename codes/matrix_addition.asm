@@ -44,7 +44,7 @@
 	n 			resd 		1 									; no of rows
 	m 			resd 		1 									; no of columns 
 	i 			resd 		1 									; iterator for row
-	j 			resd		1 									; iterator for 
+	j 			resd		1 									; iterator for column
 
 
 .CODE 															; macro for main code
@@ -56,7 +56,7 @@
 	main :
 
 		PutStr msg1												; prompt 1st message	
-		GetInt word[n]											; as n lies in main memory and we have to explicitly tell the size by 																; typecasting as word
+		GetInt word[n]											; as n lies in main memory and we have to explicitly tell the  												  			; size by typecasting as word
 		cmp word[n],10											; compare the user input 
 		jnl done												; close program if not less than 100
 
@@ -104,9 +104,9 @@
 
 	read_matrix :
 
-		push ecx
-		mov eax,0
-
+		push ecx 												; we push certain value that may be of use later(as we pop) so 
+		mov eax,0												; now we can use this ecx register for some other use here it
+																; doen't matter
 		mov word[i],0											; initialise values of i and j as 0
 		mov word[j],0										
 
